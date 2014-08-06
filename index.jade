@@ -138,42 +138,44 @@ html(lang="ja")
     var remain_sec = 30*60;
     var isLighted = false;
 
-    window.onload = function() {
-        $(function() {
-            $("#loadingWrapper").fadeOut();
-            setTimeout(function(){
-                $("#page").fadeIn("slow", function(){
+
+    $(function() {
+        setTimeout(function(){
+            initPage();
+        },3000)
+    });
+
+    function initPage() {
+        $("#loadingWrapper").fadeOut();
+        setTimeout(function(){
+            $("#page").fadeIn("slow", function(){
+                setTimeout(function(){
+                    $('#bunnerText').addClass('animated fadeIn');
+
+                    $('.flexslider').flexslider({
+                        slideshowSpeed: 5000, 
+                        touch: true, 
+                        padding : 0,
+                        margin : 0,
+                        openEffect  : 'elastic',
+                        aspectRatio : true
+                    });
+
+                    $('#readingLampImage').waypoint(function() {
+                        if(! isLighted){
+                            isLighted = true;
+                            light_lamp();
+                        }
+                    }, { offset: 90 });
+
                     setTimeout(function(){
-                        $('#bunnerText').addClass('animated fadeIn');
-
-                        $('.flexslider').flexslider({
-                            slideshowSpeed: 5000, 
-                            touch: true, 
-                            padding : 0,
-                            margin : 0,
-                            openEffect  : 'elastic',
-                            aspectRatio : true
-                        });
-
-                        $('#readingLampImage').waypoint(function() {
-                            if(! isLighted){
-                                isLighted = true;
-                                light_lamp();
-                            }
-                        }, { offset: 90 });
-
-                        setTimeout(function(){
-                            $('.addthis_button_facebook').attr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
-                        },1000);
-                    },200);
-                });
-            }, 200);
-        });
+                        $('.addthis_button_facebook').attr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
+                    },1000);
+                },200);
+            });
+        }, 200);
     }
 
-    $(function(){
-
-    });
 
     function light_lamp(){
         $("#readingLampImage").css("display","none");
