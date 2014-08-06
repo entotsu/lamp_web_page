@@ -10,85 +10,94 @@
     script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     
     -->
-    <style type="text/css">
-      #bunnerText {
-          -webkit-animation-duration: 3s;
-          -webkit-animation-delay: 0s;
-          -webkit-animation-iteration-count: 1;
-      }
-      
-      
-    </style>
+    <style type="text/css">#page{display:none;}</style>
     <title>LAMP -Your mate at night reading. - </title>
   </head>
   <body>
-    <section id="bunner">
-      <div id="bunner-innerBox">
-        <div id="bunnerText">
-          <hgroup>
-            <h1>LAMP</h1>
-            <h2>Reading Lamp in sublime night.</h2>
-          </hgroup>
-          <!-- <a href=""><img id="AppStoreLinkImage" src="images/AppStoreBadge.png" alt="AppStoreButton"></a> -->
-          <p>Now available for iPhone / iPad / iPod Touch</p>
+    <div id="loadingWrapper">
+      <div id="loadingSpin">
+        <div class="loading spin-1">
+          <div class="loading spin-2">
+            <div class="loading spin-3">
+              <div class="loading spin-4">
+                <div class="loading spin-5">
+                  <div class="loading spin-6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="iPhoneImageBox"><span id="timerCounter">30:00</span><img id="readingLampImage" src="images/nonTimer_normal.png" alt="topScreenShot" style="display:block;"><img id="readingLampImage_light" src="images/nonTimer_light.png" alt="topScreenShot" style="display:none;"></div>
       </div>
-    </section>
-    <section id="leadContainer">
-      <p>With its delightfully clever way to reading before sleep, LAMP is one of the simplest Reading Light you will ever use.</p>
-    </section>
-    <section id="features" style="border:0;" class="flexslider">
-      <ul class="slides">
-        <li>
-          <section id="feature_timer">
-            <div>
-              <p>Simple Timer let you comfortable reading.</p>
-            </div>
-            <div><img src="images/timer_shot.png" alt="Timer Screen Shot"></div>
-          </section>
-        </li>
-        <li>
-          <section id="feature_music">
-            <div>
-              <p>Sublime music make sublime night.</p>
-            </div>
-            <div><img src="images/bgm_shot.png" alt="Music Screen Shot"></div>
-          </section>
-        </li>
-        <li>
-          <section id="feature_simple">
-            <div>
-              <p>A beautiful and focused Reading Lamp. Nothing more. Nothing less.</p>
-            </div>
-            <div><img src="images/simpleUI_shot.png" alt="Simple Screen Shot."></div>
-          </section>
-        </li>
-      </ul>
-    </section>
-    <section id="appStore">
-      <p id="anyLanguage"><span class="logo-font">LAMP</span> is available in English, Deutsch, Español, Français, Pусский, 日本語 and Italiano.</p>
-      <p id="appStoreLink"><a href="javascript:void(0)"><img src="images/appstore.png" alt="AppStore" height="84.5px" width="273px"></a></p>
-    </section>
-    <section id="shareBox">
-      <div>
-      </div><!-- AddThis Button BEGIN -->
-      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-        <a class="addthis_button_facebook"></a>
-        <a class="addthis_button_twitter"></a>
-        <a class="addthis_button_pinterest_share"></a>
-        <a class="addthis_button_google_plusone_share"></a>
-      </div>
-      <!-- AddThis Button END -->
-    </section>
-    <section id="follow_contact">
-      <a href="https://twitter.com/taku_oka" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @twitter</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a id="contactButton" href="mailto:blackn.red42@gmail.com" class="button">contact</a>
-    </section>
-    <fotter></fotter>
-    <audio id="LightingSound" preload="auto">
-      <source src="./sounds/kati.mp3" type="audio/mp3">
-    </audio>
+    </div>
+    <div id="page">
+      <section id="bunner">
+        <div id="bunner-innerBox">
+          <div id="bunnerText" style="opacity:0">
+            <hgroup>
+              <h1>LAMP</h1>
+              <h2>Reading Lamp in sublime night.</h2>
+            </hgroup>
+            <!-- <a href=""><img id="AppStoreLinkImage" src="images/AppStoreBadge.png" alt="AppStoreButton"></a> -->
+            <p>Now available for iPhone / iPad / iPod Touch</p>
+          </div>
+          <div id="iPhoneImageBox"><span id="timerCounter">30:00</span><img id="readingLampImage" src="images/nonTimer_normal.png" alt="topScreenShot" style="display:block;"><img id="readingLampImage_light" src="images/nonTimer_light.png" alt="topScreenShot" style="display:none;"></div>
+        </div>
+      </section>
+      <section id="leadContainer">
+        <p>With its delightfully clever way to reading before sleep, LAMP is one of the simplest Reading Light you will ever use.</p>
+      </section>
+      <section id="features" style="border:0;" class="flexslider">
+        <ul class="slides">
+          <li>
+            <section id="feature_timer">
+              <div>
+                <p>Simple Timer let you comfortable reading.</p>
+              </div>
+              <div><img src="images/timer_shot.png" alt="Timer Screen Shot"></div>
+            </section>
+          </li>
+          <li>
+            <section id="feature_music">
+              <div>
+                <p>Sublime music make sublime night.</p>
+              </div>
+              <div><img src="images/bgm_shot.png" alt="Music Screen Shot"></div>
+            </section>
+          </li>
+          <li>
+            <section id="feature_simple">
+              <div>
+                <p>A beautiful and focused Reading Lamp. Nothing more. Nothing less.</p>
+              </div>
+              <div><img src="images/simpleUI_shot.png" alt="Simple Screen Shot."></div>
+            </section>
+          </li>
+        </ul>
+      </section>
+      <section id="appStore">
+        <p id="anyLanguage"><span class="logo-font">LAMP</span> is available in English, Deutsch, Español, Français, Pусский, 日本語 and Italiano.</p>
+        <p id="appStoreLink"><a href="javascript:void(0)"><img src="images/appstore.png" alt="AppStore" height="84.5px" width="273px"></a></p>
+      </section>
+      <section id="shareBox">
+        <div>
+        </div><!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+          <a class="addthis_button_facebook"></a>
+          <a class="addthis_button_twitter"></a>
+          <a class="addthis_button_pinterest_share"></a>
+          <a class="addthis_button_google_plusone_share"></a>
+        </div>
+        <!-- AddThis Button END -->
+      </section>
+      <section id="follow_contact">
+        <a href="https://twitter.com/taku_oka" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @twitter</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a id="contactButton" href="mailto:blackn.red42@gmail.com" class="button">contact</a>
+      </section>
+      <fotter></fotter>
+      <audio id="LightingSound" preload="auto">
+        <source src="./sounds/kati.mp3" type="audio/mp3">
+      </audio>
+    </div>
   </body>
   <script type="text/javascript" src="javascripts/jquery-2.0.3.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.flexslider.js"></script>
@@ -97,28 +106,41 @@
     var remain_sec = 30*60;
     var isLighted = false;
     
-    $(function(){
-        $('#bunnerText').addClass('animated fadeIn');
-        $('.flexslider').flexslider({
-                slideshowSpeed: 5000, 
-                touch: true, 
-                padding : 0,
-                margin : 0,
-                openEffect  : 'elastic',
-                aspectRatio : true
+    window.onload = function() {
+        $(function() {
+            $("#loadingWrapper").fadeOut();
+            setTimeout(function(){
+                $("#page").fadeIn("slow", function(){
+                    setTimeout(function(){
+                        $('#bunnerText').addClass('animated fadeIn');
+                        
+                        $('.flexslider').flexslider({
+                            slideshowSpeed: 5000, 
+                            touch: true, 
+                            padding : 0,
+                            margin : 0,
+                            openEffect  : 'elastic',
+                            aspectRatio : true
+                        });
+                        
+                        $('#readingLampImage').waypoint(function() {
+                            if(! isLighted){
+                                isLighted = true;
+                                light_lamp();
+                            }
+                        }, { offset: 90 });
+                        
+                        setTimeout(function(){
+                            $('.addthis_button_facebook').attr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
+                        },1000);
+                    },200);
+                });
+            }, 200);
         });
-        $('#readingLampImage').waypoint(function() {
-            if(! isLighted){
-                isLighted = true;
-                light_lamp();
-            }
-        }, { offset: 90 });
-        
-        setTimeout(function(){
-            $('.addthis_button_facebook').a
-            ttr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
-            },3000);
-            
+    }
+    
+    $(function(){
+    
     });
     
     function light_lamp(){

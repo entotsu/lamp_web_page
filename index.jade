@@ -11,12 +11,8 @@ html(lang="ja")
     //if lt IE 9
         script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
 
-    style(type='text/css').
-        #bunnerText {
-            -webkit-animation-duration: 3s;
-            -webkit-animation-delay: 0s;
-            -webkit-animation-iteration-count: 1;
-        }
+    //- 初期ローディング用    
+    style(type='text/css') #page{display:none;}
 
         
     title LAMP -Your mate at night reading. - 
@@ -27,90 +23,102 @@ html(lang="ja")
 
   body
 
-    section#bunner
-      #bunner-innerBox
-        #bunnerText
-          hgroup
-            h1 LAMP
-            h2 Reading Lamp in sublime night.
-          // <a href=""><img id="AppStoreLinkImage" src="images/AppStoreBadge.png" alt="AppStoreButton"></a> 
-          p Now available for iPhone / iPad / iPod Touch
-        #iPhoneImageBox
-          span#timerCounter 30:00
-          img#readingLampImage(src='images/nonTimer_normal.png', alt='topScreenShot', style='display:block;')
-          img#readingLampImage_light(src='images/nonTimer_light.png', alt='topScreenShot', style='display:none;')
+
+    //- ローディングアニメ−ション用
+    #loadingWrapper
+        #loadingSpin
+            .loading.spin-1
+                .loading.spin-2
+                    .loading.spin-3
+                        .loading.spin-4
+                            .loading.spin-5
+                                .loading.spin-6
+
+    #page
+        section#bunner
+          #bunner-innerBox
+            #bunnerText(style="opacity:0")
+              hgroup
+                h1 LAMP
+                h2 Reading Lamp in sublime night.
+              // <a href=""><img id="AppStoreLinkImage" src="images/AppStoreBadge.png" alt="AppStoreButton"></a> 
+              p Now available for iPhone / iPad / iPod Touch
+            #iPhoneImageBox
+              span#timerCounter 30:00
+              img#readingLampImage(src='images/nonTimer_normal.png', alt='topScreenShot', style='display:block;')
+              img#readingLampImage_light(src='images/nonTimer_light.png', alt='topScreenShot', style='display:none;')
 
 
-    section#leadContainer
-      p
-        | With its delightfully clever way to reading before sleep, LAMP is one of the simplest Reading Light you will ever use.
-    section#features.flexslider(style='border:0;')
-      ul.slides
-        li
-          section#feature_timer
+        section#leadContainer
+          p
+            | With its delightfully clever way to reading before sleep, LAMP is one of the simplest Reading Light you will ever use.
+        section#features.flexslider(style='border:0;')
+          ul.slides
+            li
+              section#feature_timer
+                div
+                  p Simple Timer let you comfortable reading.
+                div
+                  img(src='images/timer_shot.png', alt='Timer Screen Shot')
+            li
+              section#feature_music
+                div
+                  p Sublime music make sublime night.
+                div
+                  img(src='images/bgm_shot.png', alt='Music Screen Shot')
+            li
+              section#feature_simple
+                div
+                  p A beautiful and focused Reading Lamp. Nothing more. Nothing less.
+                div
+                  img(src='images/simpleUI_shot.png', alt='Simple Screen Shot.')
+
+
+
+
+
+
+        section#appStore
+            p#anyLanguage
+                | <span class="logo-font">LAMP</span> is available in English, Deutsch, Español, Français, Pусский, 日本語 and Italiano.
+            p#appStoreLink
+                a(href='javascript:void(0)')
+                    img(src='images/appstore.png', alt='AppStore', height="84.5px", width="273px")
+
+
+
+        section#shareBox
             div
-              p Simple Timer let you comfortable reading.
-            div
-              img(src='images/timer_shot.png', alt='Timer Screen Shot')
-        li
-          section#feature_music
-            div
-              p Sublime music make sublime night.
-            div
-              img(src='images/bgm_shot.png', alt='Music Screen Shot')
-        li
-          section#feature_simple
-            div
-              p A beautiful and focused Reading Lamp. Nothing more. Nothing less.
-            div
-              img(src='images/simpleUI_shot.png', alt='Simple Screen Shot.')
+                //- span
+                //-     | <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                //- span
+                //-     | <a href="https://twitter.com/share" class="twitter-share-button" data-via="taku_oka">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                //- span
+                //-     | <div class="g-plusone" data-size="medium"></div>
+
+            |<!-- AddThis Button BEGIN -->
+            |<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+            |   <a class="addthis_button_facebook"></a>
+            |   <a class="addthis_button_twitter"></a>
+            |   <a class="addthis_button_pinterest_share"></a>
+            |   <a class="addthis_button_google_plusone_share"></a>
+            |</div>
+            |<!-- AddThis Button END -->
 
 
 
 
+        section#follow_contact
+            | <a href="https://twitter.com/taku_oka" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @twitter</a>
+            | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            a#contactButton.button(href="mailto:blackn.red42@gmail.com") contact
+
+        fotter
 
 
-    section#appStore
-        p#anyLanguage
-            | <span class="logo-font">LAMP</span> is available in English, Deutsch, Español, Français, Pусский, 日本語 and Italiano.
-        p#appStoreLink
-            a(href='javascript:void(0)')
-                img(src='images/appstore.png', alt='AppStore', height="84.5px", width="273px")
-
-
-
-    section#shareBox
-        div
-            //- span
-            //-     | <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-            //- span
-            //-     | <a href="https://twitter.com/share" class="twitter-share-button" data-via="taku_oka">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            //- span
-            //-     | <div class="g-plusone" data-size="medium"></div>
-
-        |<!-- AddThis Button BEGIN -->
-        |<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-        |   <a class="addthis_button_facebook"></a>
-        |   <a class="addthis_button_twitter"></a>
-        |   <a class="addthis_button_pinterest_share"></a>
-        |   <a class="addthis_button_google_plusone_share"></a>
-        |</div>
-        |<!-- AddThis Button END -->
-
-
-
-
-    section#follow_contact
-        | <a href="https://twitter.com/taku_oka" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @twitter</a>
-        | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-        a#contactButton.button(href="mailto:blackn.red42@gmail.com") contact
-
-    fotter
-
-
-    audio#LightingSound(preload='auto')
-      source(src='./sounds/kati.mp3', type='audio/mp3')
+        audio#LightingSound(preload='auto')
+          source(src='./sounds/kati.mp3', type='audio/mp3')
 
 
 
@@ -129,27 +137,40 @@ html(lang="ja")
     var remain_sec = 30*60;
     var isLighted = false;
 
-    $(function(){
-        $('#bunnerText').addClass('animated fadeIn');
-        $('.flexslider').flexslider({
-                slideshowSpeed: 5000, 
-                touch: true, 
-                padding : 0,
-                margin : 0,
-                openEffect  : 'elastic',
-                aspectRatio : true
-            });
-        $('#readingLampImage').waypoint(function() {
-            if(! isLighted){
-                isLighted = true;
-                light_lamp();
-            }
-        }, { offset: 90 });
+    window.onload = function() {
+        $(function() {
+            $("#loadingWrapper").fadeOut();
+            setTimeout(function(){
+                $("#page").fadeIn("slow", function(){
+                    setTimeout(function(){
+                        $('#bunnerText').addClass('animated fadeIn');
 
-        setTimeout(function(){
-            $('.addthis_button_facebook').a
-            ttr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
-            },3000);
+                        $('.flexslider').flexslider({
+                            slideshowSpeed: 5000, 
+                            touch: true, 
+                            padding : 0,
+                            margin : 0,
+                            openEffect  : 'elastic',
+                            aspectRatio : true
+                        });
+
+                        $('#readingLampImage').waypoint(function() {
+                            if(! isLighted){
+                                isLighted = true;
+                                light_lamp();
+                            }
+                        }, { offset: 90 });
+
+                        setTimeout(function(){
+                            $('.addthis_button_facebook').attr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
+                        },1000);
+                    },200);
+                });
+            }, 200);
+        });
+    }
+
+    $(function(){
 
     });
 

@@ -1,5 +1,7 @@
 @charset "utf-8"
 
+
+@import compass
 @import compass/reset
 
 
@@ -22,7 +24,6 @@ $PREFIX_TYPES: -webkit-, -moz-, -ms-, -o-, ""
     @each $prefix in $PREFIX_TYPES
         #{$property}: #{$prefix}$value
 
-//@include max-screen(1024px) { ... }
 
 =max-screen($res)
     @media screen and (max-width: $res)
@@ -356,42 +357,173 @@ $shareBox-width: (32+(2*2)+($shareIcon-margin*2))*4
 
 
 
-// .centeredImage
-//     position: absolute
-//     top: 0
-//     bottom: 0
-//     left: 0
-//     right: 0
-//     margin: auto
-//     max-width: 100%
-//     max-height: 100%
-
-
-
-// //-------中央配置のクラス------- 
-// .centering-block // width と　height 必須
-//     text-align: center
-//     // border: 2px solid blue
-
-// .centering-block:before
-//     content: ''
-//     display: inline-block
-//     height: 100%
-//     vertical-align: middle
-//     margin-right: -0.25em
-//     // border: 2px dotted pink
-
-// .centered-block
-//     display: inline-block
-//     vertical-align: middle
-//     // border: 2px solid cyan
 
 
 
 
-//----------------- animation -------------------
+//---------------------------------------------------
+//         A N I M A T I O N  
+//---------------------------------------------------
 
 #bunnerText
     +addPrefix_property(animation-duration, 3s)
     +addPrefix_property(animation-delay, 0s)
     +addPrefix_property(animation-iteration-count, 1)
+
+
+=animation-name($name...)
+    -o-animation-name: $name
+    -moz-animation-name: $name
+    -webkit-animation-name: $name
+    animation-name: $name
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+
+
+
+=animation-delay($delay...)
+    -o-animation-delay: $delay
+    -moz-animation-delay: $delay
+    -webkit-animation-delay: $delay
+    animation-delay: $delay
+
+=animation-duration($duration...)
+    -o-animation-duration: $duration
+    -moz-animation-duration: $duration
+    -webkit-animation-duration: $duration
+    animation-duration: $duration
+
+=animation-timing-function($timing...)
+    -o-animation-timing-function: $timing
+    -moz-animation-timing-function: $timing
+    -webkit-animation-timing-function: $timing
+    animation-timing-function: $timing
+
+=animation-iteration-count($count...)
+    -o-animation-iteration-count: $count
+    -moz-animation-iteration-count: $count
+    -webkit-animation-iteration-count: $count
+    animation-iteration-count: $count
+
+=animation-direction($direction...)
+    -o-animation-direction: $direction
+    -moz-animation-direction: $direction
+    -webkit-animation-direction: $direction
+    animation-direction: $direction
+
+=animation-fill-mode($fill...)
+    -o-animation-fill-mode: $fill
+    -moz-animation-fill-mode: $fill
+    -webkit-animation-fill-mode: $fill
+    animation-fill-mode: $fill
+
+=animation-play-state($state...)
+    -o-animation-play-state: $state
+    -moz-animation-play-state: $state
+    -webkit-animation-play-state: $state
+    animation-play-state: $state
+
+=animation($animation...)
+    -o-animation: $animation
+    -moz-animation: $animation
+    -webkit-animation: $animation
+    animation: $animation
+
+
+
+// +keyframes(zoomOut)
+//   0%
+//     +transform(scale(2,2))
+//   100%
+//     +transform(scale(1,1))
+
+
+
+// +keyframes(huerotator)
+//   0%
+//     +filter(hue-rotate(0deg))
+//   100%
+//     +filter(hue-rotate(360deg))
+
+
++keyframes(loading)
+    0%
+        +transform(rotate(0deg))
+    25%
+        +transform(rotate(160deg))
+    50%
+        +transform(rotate(0deg))
+    75%
+        +transform(rotate(160deg))
+    100%
+        +transform(rotate(0deg))
+
+#loadingWrapper
+    position: absolute
+    width: 100%
+    height: 300px
+    z-index: 100
+    top: 10px
+    #loadingSpin
+        margin: 150px auto
+
+.loading 
+    background-color: transparent
+    border-radius: 50%
+    margin: 5px auto
+    +animation(loading 5s infinite linear)
+
+
+.spin-1
+    border: 5px solid #c00353 
+    border-top: 5px solid transparent
+    border-left: 5px solid transparent
+    width: 120px
+    height: 120px 
+
+.spin-2
+    border: 5px solid #05bbc3 
+    border-top: 5px solid transparent
+    border-left: 5px solid transparent
+    width: 100px
+    height: 100px
+    +animation-delay(1s)
+
+.spin-3
+    border: 5px solid #d2d947 
+    border-top: 5px solid transparent
+    border-left: 5px solid transparent
+    width: 80px
+    height: 80px 
+    +animation-delay(1s)
+
+.spin-4
+    border: 5px solid #f2a342 
+    border-top: 5px solid transparent
+    border-left: 5px solid transparent
+    width: 60px
+    height: 60px 
+    +animation-delay(1s)
+
+.spin-5
+    border: 5px solid #f34d51 
+    border-top: 5px solid transparent
+    border-left: 5px solid transparent
+    width: 40px
+    height: 40px 
+    +animation-delay(1s)
+
+.spin-6
+    border: 5px solid #fff 
+    width: 20px
+    height: 20px 
+    +animation-delay(1s)
+
