@@ -1,10 +1,8 @@
 
 
-#work11_1を起点に、p5, p17にコピーする (html以外)
 
 
-# JADE_FILE_PATH = 
-#     "build/work11_1/work11_1.html" : "jade/work11_1.jade"
+JADE_FILE_PATH = "index.html" : "index.jade"
 
 CSS_DIR = 'css/'
 
@@ -25,7 +23,7 @@ module.exports = (grunt) ->
             compile:
                 options:
                     pretty: true
-                # files: JADE_FILE_PATH
+                files: JADE_FILE_PATH
 
         coffee:
             compile:
@@ -87,7 +85,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-newer'
 
 
-    grunt.registerTask 'make', ['newer:coffee', 'newer:jade', 'newer:compass']
+    grunt.registerTask 'make', ['newer:coffee', 'jade', 'newer:compass']
     grunt.registerTask 'default', ['make', 'connect', 'esteWatch']
 
 
