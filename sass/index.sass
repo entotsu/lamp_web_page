@@ -264,7 +264,7 @@ $slider-height-sp: $sp-slideImage-maxHeight + $sp-slideText-height + 100px
                     margin: 7%
                     height: $sp-slideText-height
             >img
-                position: absolute
+                position: relative
                 top: 0
                 bottom: 0
                 left: 0
@@ -289,22 +289,23 @@ $slider-height-sp: $sp-slideImage-maxHeight + $sp-slideText-height + 100px
 
 
 #appStore
-    >p
+    >p#anyLanguage
         margin: 10% 10% 1% 10%
         font-size: 40px
         .logo-font
             font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif
-    >a
-        >img:hover
+    >p#appStoreLink
+        margin: 10% auto
+        img:hover
             opacity: 0.8
+
 
     
 $shareIcon-margin:14px
 $shareBox-width: (32+(2*2)+($shareIcon-margin*2))*4
 
 #shareBox
-    margin-bottom: 3%
-
+    margin-bottom: $shareIcon-margin
     .addthis_toolbox
         display: inline-block
         width: $shareBox-width
@@ -319,9 +320,10 @@ $shareBox-width: (32+(2*2)+($shareIcon-margin*2))*4
 
 #follow_contact
     margin-bottom: 10%
-    
-    >p
-        margin-top: 4%
+    >*
+        margin: $shareIcon-margin / 2
+    #contactButton
+        top: -17.5px
 
 // #shareBox
 //     >div

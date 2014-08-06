@@ -1,5 +1,5 @@
-!!! 5
-html(lang='ja')
+doctype html
+html(lang="ja")
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
@@ -11,7 +11,7 @@ html(lang='ja')
     //if lt IE 9
         script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
 
-    style(type='text/css')
+    style(type='text/css').
         #bunnerText {
             -webkit-animation-duration: 3s;
             -webkit-animation-delay: 0s;
@@ -43,8 +43,7 @@ html(lang='ja')
 
     section#leadContainer
       p
-        | With its delightfully clever way to set time, Rise is one of the simplest alarm
-        | clocks you will ever use.
+        | With its delightfully clever way to reading before sleep, LAMP is one of the simplest Reading Light you will ever use.
     section#features.flexslider(style='border:0;')
       ul.slides
         li
@@ -72,10 +71,11 @@ html(lang='ja')
 
 
     section#appStore
-        p
+        p#anyLanguage
             | <span class="logo-font">LAMP</span> is available in English, Deutsch, Español, Français, Pусский, 日本語 and Italiano.
-        a(href='')
-            img(src='images/appstore.png', alt='AppStore' style="-webkit-transform: scale(0.5);")
+        p#appStoreLink
+            a(href='javascript:void(0)')
+                img(src='images/appstore.png', alt='AppStore', height="84.5px", width="273px")
 
 
 
@@ -104,8 +104,7 @@ html(lang='ja')
         | <a href="https://twitter.com/taku_oka" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @twitter</a>
         | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-        p
-            a.button(href="mailto:blackn.red42@gmail.com") contact
+        a#contactButton.button(href="mailto:blackn.red42@gmail.com") contact
 
     fotter
 
@@ -125,7 +124,7 @@ html(lang='ja')
   script(type='text/javascript', src='javascripts/waypoints.min.js')
 
 
-  script(type='text/javascript')
+  script(type='text/javascript').
 
     var remain_sec = 30*60;
     var isLighted = false;

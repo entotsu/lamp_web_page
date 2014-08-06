@@ -212,7 +212,7 @@ body {
             height: 50px; } }
       /* line 266, ../sass/index.sass */
       #features > section > div > img, #features > ul > li > section > div > img {
-        position: absolute;
+        position: relative;
         top: 0;
         bottom: 0;
         left: 0;
@@ -228,38 +228,44 @@ body {
             max-height: 180px; } }
 
 /* line 292, ../sass/index.sass */
-#appStore > p {
+#appStore > p#anyLanguage {
   margin: 10% 10% 1% 10%;
   font-size: 40px; }
   /* line 295, ../sass/index.sass */
-  #appStore > p .logo-font {
+  #appStore > p#anyLanguage .logo-font {
     font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
-/* line 298, ../sass/index.sass */
-#appStore > a > img:hover {
-  opacity: 0.8; }
+/* line 297, ../sass/index.sass */
+#appStore > p#appStoreLink {
+  margin: 10% auto; }
+  /* line 299, ../sass/index.sass */
+  #appStore > p#appStoreLink img:hover {
+    opacity: 0.8; }
 
-/* line 305, ../sass/index.sass */
+/* line 307, ../sass/index.sass */
 #shareBox {
-  margin-bottom: 3%; }
-  /* line 308, ../sass/index.sass */
+  margin-bottom: 14px; }
+  /* line 309, ../sass/index.sass */
   #shareBox .addthis_toolbox {
     display: inline-block;
     width: 256px; }
-    /* line 312, ../sass/index.sass */
+    /* line 313, ../sass/index.sass */
     #shareBox .addthis_toolbox a {
       margin: 14px; }
-      /* line 315, ../sass/index.sass */
+      /* line 316, ../sass/index.sass */
       #shareBox .addthis_toolbox a span {
         border-radius: 7px; }
 
-/* line 320, ../sass/index.sass */
+/* line 321, ../sass/index.sass */
 #follow_contact {
   margin-bottom: 10%; }
   /* line 323, ../sass/index.sass */
-  #follow_contact > p {
-    margin-top: 4%; }
+  #follow_contact > * {
+    margin: 7px; }
+  /* line 325, ../sass/index.sass */
+  #follow_contact #contactButton {
+    top: -17.5px; }
 
-/* line 332, ../sass/index.sass */
+/* line 334, ../sass/index.sass */
 .button {
   padding: 8px 14px;
   position: relative;
@@ -272,13 +278,13 @@ body {
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2) inset, 0 4px 0 #1074b7;
   background: #3498db; }
 
-/* line 344, ../sass/index.sass */
+/* line 346, ../sass/index.sass */
 .button:active {
   background: #3498db;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 2px 0 #1074b7;
   top: 2px; }
 
-/* line 392, ../sass/index.sass */
+/* line 394, ../sass/index.sass */
 #bunnerText {
   -webkit-animation-duration: 3s;
   -moz-animation-duration: 3s;
