@@ -58,85 +58,105 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-family: HelveticaNeue-UltraLight;
   background-color: #082135;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  letter-spacing: 1px; }
 
-/* line 74, ../sass/index.sass */
+/* line 75, ../sass/index.sass */
 body {
   text-align: center; }
 
-/* line 95, ../sass/index.sass */
+/* line 86, ../sass/index.sass */
+#loadingWrapper {
+  position: absolute;
+  z-index: 100;
+  top: 20%;
+  width: 100%;
+  height: 300px; }
+  /* line 92, ../sass/index.sass */
+  #loadingWrapper #loadingSpin {
+    margin: 0px auto; }
+  /* line 94, ../sass/index.sass */
+  #loadingWrapper > p {
+    margin: 30px;
+    color: white;
+    letter-spacing: 4px;
+    font-family: HelveticaNeue;
+    font-weight: 600; }
+
+/* line 117, ../sass/index.sass */
 #bunner {
   max-width: 1500px; }
   @media screen and (min-width: 1500px) {
-    /* line 95, ../sass/index.sass */
+    /* line 117, ../sass/index.sass */
     #bunner {
       margin: 0 auto; } }
-  /* line 103, ../sass/index.sass */
+  /* line 125, ../sass/index.sass */
   #bunner > div {
     margin: 7% 7% 0 7%; }
-    /* line 106, ../sass/index.sass */
+    /* line 128, ../sass/index.sass */
     #bunner > div > div {
       margin: 0 auto;
       margin-top: 200px;
-      width: 40%;
+      width: 50%;
       color: white; }
-      /* line 116, ../sass/index.sass */
+      /* line 138, ../sass/index.sass */
       #bunner > div > div h1 {
         font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
         font-size: 150px;
+        letter-spacing: 11px;
         margin: 7%; }
-      /* line 120, ../sass/index.sass */
+      /* line 143, ../sass/index.sass */
       #bunner > div > div h2 {
         font-size: 30px;
         margin: 7%; }
-      /* line 123, ../sass/index.sass */
+      /* line 146, ../sass/index.sass */
       #bunner > div > div a {
         margin: 7%; }
-        /* line 125, ../sass/index.sass */
+        /* line 148, ../sass/index.sass */
         #bunner > div > div a img {
           width: 50%; }
-      /* line 127, ../sass/index.sass */
+      /* line 150, ../sass/index.sass */
       #bunner > div > div p {
         margin: 7%; }
-    /* line 129, ../sass/index.sass */
+    /* line 152, ../sass/index.sass */
     #bunner > div > div > img {
       margin: 0 auto; }
 
 @media screen and (max-width: 1200px) {
-  /* line 138, ../sass/index.sass */
+  /* line 161, ../sass/index.sass */
   #bunner > div > div h1 {
     font-size: 105px; } }
 @media screen and (max-width: 1200px) {
-  /* line 141, ../sass/index.sass */
+  /* line 164, ../sass/index.sass */
   #bunner > div > div h2 {
     font-size: 21px; } }
 @media screen and (max-width: 1200px) {
-  /* line 144, ../sass/index.sass */
+  /* line 167, ../sass/index.sass */
   #bunner > div > div > img {
     width: 250px; } }
 
 @media screen and (max-width: 675px) {
-  /* line 152, ../sass/index.sass */
+  /* line 175, ../sass/index.sass */
   #bunner > div > div {
     width: 86%; } }
 @media screen and (max-width: 675px) {
-  /* line 156, ../sass/index.sass */
+  /* line 179, ../sass/index.sass */
   #bunner > div > div h1 {
     font-size: 67.5px; } }
 @media screen and (max-width: 675px) {
-  /* line 159, ../sass/index.sass */
+  /* line 182, ../sass/index.sass */
   #bunner > div > div h2 {
     font-size: 17.4px; } }
 @media screen and (max-width: 675px) {
-  /* line 162, ../sass/index.sass */
+  /* line 185, ../sass/index.sass */
   #bunner > div > div > img {
     width: 250px;
     margin: 0 auto; } }
 
-/* line 169, ../sass/index.sass */
+/* line 192, ../sass/index.sass */
 #iPhoneImageBox {
   position: relative; }
-  /* line 171, ../sass/index.sass */
+  /* line 194, ../sass/index.sass */
   #iPhoneImageBox span {
     color: white !important;
     font-weight: lighter;
@@ -152,23 +172,23 @@ body {
     width: 200px;
     height: 100px; }
     @media screen and (max-width: 1200px) {
-      /* line 171, ../sass/index.sass */
+      /* line 194, ../sass/index.sass */
       #iPhoneImageBox span {
         font-size: 24px;
         top: 59.5%; } }
 
-/* line 206, ../sass/index.sass */
+/* line 229, ../sass/index.sass */
 #leadContainer {
   margin: 10% 0 10% 0; }
-  /* line 209, ../sass/index.sass */
+  /* line 232, ../sass/index.sass */
   #leadContainer p {
     margin: 7%;
     font-size: 45px; }
 
-/* line 232, ../sass/index.sass */
+/* line 254, ../sass/index.sass */
 #features {
   background-color: rgba(0, 0, 0, 0.6); }
-  /* line 235, ../sass/index.sass */
+  /* line 257, ../sass/index.sass */
   #features > section, #features > ul > li > section {
     height: 373px;
     display: -webkit-box;
@@ -179,24 +199,24 @@ body {
     margin: 0 10% 0 10%;
     padding: 3% 0 3% 0; }
     @media screen and (max-width: 1200px) {
-      /* line 235, ../sass/index.sass */
+      /* line 257, ../sass/index.sass */
       #features > section, #features > ul > li > section {
         margin: 0; } }
     @media screen and (max-width: 675px) {
-      /* line 235, ../sass/index.sass */
+      /* line 257, ../sass/index.sass */
       #features > section, #features > ul > li > section {
         display: block;
         height: 330px; } }
-    /* line 248, ../sass/index.sass */
+    /* line 270, ../sass/index.sass */
     #features > section > div, #features > ul > li > section > div {
       border: 1px solid rgba(0, 0, 0, 0);
       width: 50%;
       position: relative; }
       @media screen and (max-width: 675px) {
-        /* line 248, ../sass/index.sass */
+        /* line 270, ../sass/index.sass */
         #features > section > div, #features > ul > li > section > div {
           width: auto; } }
-      /* line 256, ../sass/index.sass */
+      /* line 278, ../sass/index.sass */
       #features > section > div > p, #features > ul > li > section > div > p {
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
@@ -205,12 +225,12 @@ body {
         text-align: left;
         font-size: 35px; }
         @media screen and (max-width: 675px) {
-          /* line 256, ../sass/index.sass */
+          /* line 278, ../sass/index.sass */
           #features > section > div > p, #features > ul > li > section > div > p {
             font-size: 20px;
             margin: 7%;
             height: 50px; } }
-      /* line 267, ../sass/index.sass */
+      /* line 289, ../sass/index.sass */
       #features > section > div > img, #features > ul > li > section > div > img {
         position: relative;
         top: 0;
@@ -222,50 +242,54 @@ body {
         max-height: 373px;
         max-width: 100%; }
         @media screen and (max-width: 675px) {
-          /* line 267, ../sass/index.sass */
+          /* line 289, ../sass/index.sass */
           #features > section > div > img, #features > ul > li > section > div > img {
             position: relative;
             max-height: 180px; } }
 
-/* line 293, ../sass/index.sass */
+/* line 315, ../sass/index.sass */
 #appStore > p#anyLanguage {
   margin: 10% 10% 1% 10%;
   font-size: 40px; }
-  /* line 296, ../sass/index.sass */
+  @media screen and (max-width: 675px) {
+    /* line 315, ../sass/index.sass */
+    #appStore > p#anyLanguage {
+      font-size: 25px; } }
+  /* line 320, ../sass/index.sass */
   #appStore > p#anyLanguage .logo-font {
     font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
-/* line 298, ../sass/index.sass */
+/* line 322, ../sass/index.sass */
 #appStore > p#appStoreLink {
   margin: 10% auto; }
-  /* line 300, ../sass/index.sass */
+  /* line 324, ../sass/index.sass */
   #appStore > p#appStoreLink img:hover {
     opacity: 0.8; }
 
-/* line 308, ../sass/index.sass */
+/* line 332, ../sass/index.sass */
 #shareBox {
   margin-bottom: 14px; }
-  /* line 310, ../sass/index.sass */
+  /* line 334, ../sass/index.sass */
   #shareBox .addthis_toolbox {
     display: inline-block;
     width: 256px; }
-    /* line 314, ../sass/index.sass */
+    /* line 338, ../sass/index.sass */
     #shareBox .addthis_toolbox a {
       margin: 14px; }
-      /* line 317, ../sass/index.sass */
+      /* line 341, ../sass/index.sass */
       #shareBox .addthis_toolbox a span {
         border-radius: 7px; }
 
-/* line 322, ../sass/index.sass */
+/* line 346, ../sass/index.sass */
 #follow_contact {
   margin-bottom: 10%; }
-  /* line 324, ../sass/index.sass */
+  /* line 348, ../sass/index.sass */
   #follow_contact > * {
     margin: 7px; }
-  /* line 326, ../sass/index.sass */
+  /* line 350, ../sass/index.sass */
   #follow_contact #contactButton {
     top: -17.5px; }
 
-/* line 335, ../sass/index.sass */
+/* line 359, ../sass/index.sass */
 .button {
   padding: 8px 14px;
   position: relative;
@@ -278,13 +302,13 @@ body {
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2) inset, 0 4px 0 #1074b7;
   background: #3498db; }
 
-/* line 347, ../sass/index.sass */
+/* line 371, ../sass/index.sass */
 .button:active {
   background: #3498db;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 2px 0 #1074b7;
   top: 2px; }
 
-/* line 368, ../sass/index.sass */
+/* line 392, ../sass/index.sass */
 #bunnerText {
   -webkit-animation-duration: 3s;
   -moz-animation-duration: 3s;
@@ -303,7 +327,7 @@ body {
   animation-iteration-count: 1; }
 
 @-webkit-keyframes loading {
-  /* line 458, ../sass/index.sass */
+  /* line 482, ../sass/index.sass */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -311,7 +335,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 460, ../sass/index.sass */
+  /* line 484, ../sass/index.sass */
   25% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -319,7 +343,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 462, ../sass/index.sass */
+  /* line 486, ../sass/index.sass */
   50% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -327,7 +351,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 464, ../sass/index.sass */
+  /* line 488, ../sass/index.sass */
   75% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -335,7 +359,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 466, ../sass/index.sass */
+  /* line 490, ../sass/index.sass */
   100% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -344,7 +368,7 @@ body {
     transform: rotate(0deg); } }
 
 @-moz-keyframes loading {
-  /* line 458, ../sass/index.sass */
+  /* line 482, ../sass/index.sass */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -352,7 +376,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 460, ../sass/index.sass */
+  /* line 484, ../sass/index.sass */
   25% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -360,7 +384,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 462, ../sass/index.sass */
+  /* line 486, ../sass/index.sass */
   50% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -368,7 +392,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 464, ../sass/index.sass */
+  /* line 488, ../sass/index.sass */
   75% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -376,7 +400,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 466, ../sass/index.sass */
+  /* line 490, ../sass/index.sass */
   100% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -385,7 +409,7 @@ body {
     transform: rotate(0deg); } }
 
 @-ms-keyframes loading {
-  /* line 458, ../sass/index.sass */
+  /* line 482, ../sass/index.sass */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -393,7 +417,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 460, ../sass/index.sass */
+  /* line 484, ../sass/index.sass */
   25% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -401,7 +425,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 462, ../sass/index.sass */
+  /* line 486, ../sass/index.sass */
   50% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -409,7 +433,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 464, ../sass/index.sass */
+  /* line 488, ../sass/index.sass */
   75% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -417,7 +441,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 466, ../sass/index.sass */
+  /* line 490, ../sass/index.sass */
   100% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -426,7 +450,7 @@ body {
     transform: rotate(0deg); } }
 
 @keyframes loading {
-  /* line 458, ../sass/index.sass */
+  /* line 482, ../sass/index.sass */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -434,7 +458,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 460, ../sass/index.sass */
+  /* line 484, ../sass/index.sass */
   25% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -442,7 +466,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 462, ../sass/index.sass */
+  /* line 486, ../sass/index.sass */
   50% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -450,7 +474,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
 
-  /* line 464, ../sass/index.sass */
+  /* line 488, ../sass/index.sass */
   75% {
     -webkit-transform: rotate(160deg);
     -moz-transform: rotate(160deg);
@@ -458,7 +482,7 @@ body {
     -o-transform: rotate(160deg);
     transform: rotate(160deg); }
 
-  /* line 466, ../sass/index.sass */
+  /* line 490, ../sass/index.sass */
   100% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -466,18 +490,7 @@ body {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); } }
 
-/* line 469, ../sass/index.sass */
-#loadingWrapper {
-  position: absolute;
-  width: 100%;
-  height: 300px;
-  z-index: 100;
-  top: 10px; }
-  /* line 475, ../sass/index.sass */
-  #loadingWrapper #loadingSpin {
-    margin: 150px auto; }
-
-/* line 478, ../sass/index.sass */
+/* line 494, ../sass/index.sass */
 .loading {
   background-color: transparent;
   border-radius: 50%;
@@ -487,7 +500,7 @@ body {
   -webkit-animation: loading 5s infinite linear;
   animation: loading 5s infinite linear; }
 
-/* line 485, ../sass/index.sass */
+/* line 501, ../sass/index.sass */
 .spin-1 {
   border: 5px solid #c00353;
   border-top: 5px solid transparent;
@@ -495,7 +508,7 @@ body {
   width: 120px;
   height: 120px; }
 
-/* line 492, ../sass/index.sass */
+/* line 508, ../sass/index.sass */
 .spin-2 {
   border: 5px solid #05bbc3;
   border-top: 5px solid transparent;
@@ -507,7 +520,7 @@ body {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-/* line 500, ../sass/index.sass */
+/* line 516, ../sass/index.sass */
 .spin-3 {
   border: 5px solid #d2d947;
   border-top: 5px solid transparent;
@@ -519,7 +532,7 @@ body {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-/* line 508, ../sass/index.sass */
+/* line 524, ../sass/index.sass */
 .spin-4 {
   border: 5px solid #f2a342;
   border-top: 5px solid transparent;
@@ -531,7 +544,7 @@ body {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-/* line 516, ../sass/index.sass */
+/* line 532, ../sass/index.sass */
 .spin-5 {
   border: 5px solid #f34d51;
   border-top: 5px solid transparent;
@@ -543,7 +556,7 @@ body {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-/* line 524, ../sass/index.sass */
+/* line 540, ../sass/index.sass */
 .spin-6 {
   border: 5px solid white;
   width: 20px;

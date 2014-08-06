@@ -69,12 +69,34 @@ body
     font-family: HelveticaNeue-UltraLight
     background-color: #082135
     background-attachment: fixed
+    letter-spacing: 1px
 
 //中央配置
 body
     text-align: center
 
 
+
+
+//---------------------------------------------------
+//         ローディング スピナー   
+//---------------------------------------------------
+
+
+#loadingWrapper
+    position: absolute
+    z-index: 100
+    top: 20%
+    width: 100%
+    height: 300px
+    #loadingSpin
+        margin: 0px auto
+    >p
+        margin: 30px
+        color: white
+        letter-spacing: 4px
+        font-family: HelveticaNeue
+        font-weight: 600
 
 
 
@@ -89,7 +111,7 @@ $bunner-margin: 7%
 $logo-font-size: 150px
 $subTitle-font-size: 30px
 $AppStore-badge-width: 50%
-$subTitle-width: 40%
+$subTitle-width: 50%
 $bunner-max-width: 1500px
 
 #bunner
@@ -101,10 +123,10 @@ $bunner-max-width: 1500px
         //中央配置！！
 
     >div
-        // border:1px solid blue;
+        // border: 1px solid blue
         margin: $bunner-margin $bunner-margin 0 $bunner-margin
         >div
-            // border:1px solid orange;
+            // border: 1px solid orange
             // float: left;
             // margin:$bunner-margin;
             margin: 0 auto
@@ -116,6 +138,7 @@ $bunner-max-width: 1500px
             h1
                 font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif
                 font-size: $logo-font-size
+                letter-spacing: 11px
                 margin: $bunner-margin
             h2
                 font-size: $subTitle-font-size
@@ -217,7 +240,6 @@ $bunner-max-width: 1500px
 
 
 
-
 //---------------------------------------------------
 //         スライダー
 //---------------------------------------------------
@@ -293,6 +315,8 @@ $slider-height-sp: $sp-slideImage-maxHeight + $sp-slideText-height + 100px
     >p#anyLanguage
         margin: 10% 10% 1% 10%
         font-size: 40px
+        +max-screen($smartPhone-size)
+            font-size: 25px
         .logo-font
             font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif
     >p#appStoreLink
@@ -466,14 +490,6 @@ $shareBox-width: (32+(2*2)+($shareIcon-margin*2))*4
     100%
         +transform(rotate(0deg))
 
-#loadingWrapper
-    position: absolute
-    width: 100%
-    height: 300px
-    z-index: 100
-    top: 10px
-    #loadingSpin
-        margin: 150px auto
 
 .loading 
     background-color: transparent
