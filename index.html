@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      #bunnerText {
+          -webkit-animation-duration: 3s;
+          -webkit-animation-delay: 0s;
+          -webkit-animation-iteration-count: 1;
+      }
+      
+      
+    </style>
+    <title>LAMP -Your mate at night reading. - </title>
+  </head>
+  <body>
+    <section id="bunner">
+      <div id="bunner-innerBox">
+        <div id="bunnerText">
+          <hgroup>
+            <h1>LAMP</h1>
+            <h2>Reading Lamp in sublime night.</h2>
+          </hgroup>
+          <!-- <a href=""><img id="AppStoreLinkImage" src="images/AppStoreBadge.png" alt="AppStoreButton"></a> -->
+          <p>Now available for iPhone / iPad / iPod Touch</p>
+        </div>
+        <div id="iPhoneImageBox"><span id="timerCounter">30:00</span><img id="readingLampImage" src="images/nonTimer_normal.png" alt="topScreenShot" style="display:block;"><img id="readingLampImage_light" src="images/nonTimer_light.png" alt="topScreenShot" style="display:none;"></div>
+      </div>
+    </section>
+    <section id="leadContainer">
+      <p>
+        With its delightfully clever way to set time, Rise is one of the simplest alarm
+        clocks you will ever use.
+      </p>
+    </section>
+    <section id="features" style="border:0;" class="flexslider">
+      <ul class="slides">
+        <li>
+          <section id="feature_timer">
+            <div>
+              <p>Simple Timer let you comfortable reading.</p>
+            </div>
+            <div><img src="images/timer_shot.png" alt="Timer Screen Shot"></div>
+          </section>
+        </li>
+        <li>
+          <section id="feature_music">
+            <div>
+              <p>Sublime music make sublime night.</p>
+            </div>
+            <div><img src="images/bgm_shot.png" alt="Music Screen Shot"></div>
+          </section>
+        </li>
+        <li>
+          <section id="feature_simple">
+            <div>
+              <p>A beautiful and focused Reading Lamp. Nothing more. Nothing less.</p>
+            </div>
+            <div><img src="images/simpleUI_shot.png" alt="Simple Screen Shot."></div>
+          </section>
+        </li>
+      </ul>
+    </section>
+    <section id="appStore">
+      <p><span class="logo-font">LAMP</span> is available in English, Deutsch, Español, Français, Pусский, 日本語 and Italiano.</p><a href=""><img src="images/appstore.png" alt="AppStore" style="-webkit-transform: scale(0.5);"></a>
+    </section>
+    <section id="shareBox">
+      <div>
+      </div><!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+        <a class="addthis_button_facebook"></a>
+        <a class="addthis_button_twitter"></a>
+        <a class="addthis_button_pinterest_share"></a>
+        <a class="addthis_button_google_plusone_share"></a>
+      </div>
+      <!-- AddThis Button END -->
+    </section>
+    <section id="follow_contact">
+      <a href="https://twitter.com/taku_oka" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @twitter</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <p><a href="mailto:blackn.red42@gmail.com" class="button">contact</a></p>
+    </section>
+    <fotter></fotter>
+    <audio id="LightingSound" preload="auto">
+      <source src="./sounds/kati.mp3" type="audio/mp3">
+    </audio>
+  </body>
+  <script type="text/javascript" src="javascripts/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="javascripts/waypoints.min.js"></script>
+  <script type="text/javascript">
+    var remain_sec = 30*60;
+    var isLighted = false;
+    
+    $(function(){
+        $('#bunnerText').addClass('animated fadeIn');
+        $('.flexslider').flexslider({
+                slideshowSpeed: 5000, 
+                touch: true, 
+                padding : 0,
+                margin : 0,
+                openEffect  : 'elastic',
+                aspectRatio : true
+        });
+        $('#readingLampImage').waypoint(function() {
+            if(! isLighted){
+                isLighted = true;
+                light_lamp();
+            }
+        }, { offset: 90 });
+        
+        setTimeout(function(){
+            $('.addthis_button_facebook').a
+            ttr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
+            },3000);
+            
+    });
+    
+    function light_lamp(){
+        $("#readingLampImage").css("display","none");
+        $("#readingLampImage_light").css("display","block");
+        document.getElementById("LightingSound").play();
+        $("body").css({
+            background: "-webkit-linear-gradient(top, #ffe8b0 0%, #36668c 50%, #0c3257 100%) fixed"}).css({
+            background: "-moz-linear-gradient(top, ffe8b0 0%, #36668c 50%, #0c3257 100%) fixed"
+        });
+        $("#bunner > div > div").css("color","black");
+        setInterval(function(){
+            step_timer();
+        },1000);
+    }
+    
+    function step_timer(){
+        remain_sec--;
+        var min = Math.floor(remain_sec/60);
+        var sec = remain_sec - (min*60);
+        var sec_str = ("0"+sec).slice(-2);
+        var min_str = ("0"+min).slice(-2);
+        $("#timerCounter").html(min_str+":"+sec_str);
+    }
+    
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    
+    
+    
+    
+    
+  </script>
+</html><!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b1ddd16c87a3aa"></script>
+<!-- AddThis Button END -->
+<!-- Goole Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-46678501-1', 'dropboxusercontent.com');
+  ga('send', 'pageview');
+</script>

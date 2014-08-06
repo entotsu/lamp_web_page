@@ -1,0 +1,297 @@
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 67, ../sass/index.sass */
+body {
+  font-family: HelveticaNeue-UltraLight;
+  background-color: #082135;
+  background-attachment: fixed; }
+
+/* line 73, ../sass/index.sass */
+body {
+  text-align: center; }
+
+/* line 94, ../sass/index.sass */
+#bunner {
+  max-width: 1500px; }
+  @media screen and (min-width: 1500px) {
+    /* line 94, ../sass/index.sass */
+    #bunner {
+      margin: 0 auto; } }
+  /* line 102, ../sass/index.sass */
+  #bunner > div {
+    margin: 7% 7% 0 7%; }
+    /* line 105, ../sass/index.sass */
+    #bunner > div > div {
+      margin: 0 auto;
+      margin-top: 200px;
+      width: 40%;
+      color: white; }
+      /* line 115, ../sass/index.sass */
+      #bunner > div > div h1 {
+        font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+        font-size: 150px;
+        margin: 7%; }
+      /* line 119, ../sass/index.sass */
+      #bunner > div > div h2 {
+        font-size: 30px;
+        margin: 7%; }
+      /* line 122, ../sass/index.sass */
+      #bunner > div > div a {
+        margin: 7%; }
+        /* line 124, ../sass/index.sass */
+        #bunner > div > div a img {
+          width: 50%; }
+      /* line 126, ../sass/index.sass */
+      #bunner > div > div p {
+        margin: 7%; }
+    /* line 128, ../sass/index.sass */
+    #bunner > div > div > img {
+      margin: 0 auto; }
+
+@media screen and (max-width: 1200px) {
+  /* line 137, ../sass/index.sass */
+  #bunner > div > div h1 {
+    font-size: 105px; } }
+@media screen and (max-width: 1200px) {
+  /* line 140, ../sass/index.sass */
+  #bunner > div > div h2 {
+    font-size: 21px; } }
+@media screen and (max-width: 1200px) {
+  /* line 143, ../sass/index.sass */
+  #bunner > div > div > img {
+    width: 250px; } }
+
+@media screen and (max-width: 675px) {
+  /* line 151, ../sass/index.sass */
+  #bunner > div > div {
+    width: 86%; } }
+@media screen and (max-width: 675px) {
+  /* line 155, ../sass/index.sass */
+  #bunner > div > div h1 {
+    font-size: 67.5px; } }
+@media screen and (max-width: 675px) {
+  /* line 158, ../sass/index.sass */
+  #bunner > div > div h2 {
+    font-size: 17.4px; } }
+@media screen and (max-width: 675px) {
+  /* line 161, ../sass/index.sass */
+  #bunner > div > div > img {
+    width: 250px;
+    margin: 0 auto; } }
+
+/* line 168, ../sass/index.sass */
+#iPhoneImageBox {
+  position: relative; }
+  /* line 170, ../sass/index.sass */
+  #iPhoneImageBox span {
+    color: white !important;
+    font-weight: lighter;
+    font-family: HelveticaNeue-UltraLight;
+    font-size: 37px;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 54%;
+    bottom: 0;
+    left: 1%;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 100px; }
+    @media screen and (max-width: 1200px) {
+      /* line 170, ../sass/index.sass */
+      #iPhoneImageBox span {
+        font-size: 24px;
+        top: 59.5%; } }
+
+/* line 205, ../sass/index.sass */
+#leadContainer {
+  margin: 10% 0 10% 0; }
+  /* line 208, ../sass/index.sass */
+  #leadContainer p {
+    margin: 7%;
+    font-size: 45px; }
+
+/* line 231, ../sass/index.sass */
+#features {
+  background-color: rgba(0, 0, 0, 0.6); }
+  /* line 234, ../sass/index.sass */
+  #features > section, #features > ul > li > section {
+    height: 373px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    margin: 0 10% 0 10%;
+    padding: 3% 0 3% 0; }
+    @media screen and (max-width: 1200px) {
+      /* line 234, ../sass/index.sass */
+      #features > section, #features > ul > li > section {
+        margin: 0; } }
+    @media screen and (max-width: 675px) {
+      /* line 234, ../sass/index.sass */
+      #features > section, #features > ul > li > section {
+        display: block;
+        height: 330px; } }
+    /* line 247, ../sass/index.sass */
+    #features > section > div, #features > ul > li > section > div {
+      border: 1px solid rgba(0, 0, 0, 0);
+      width: 50%;
+      position: relative; }
+      @media screen and (max-width: 675px) {
+        /* line 247, ../sass/index.sass */
+        #features > section > div, #features > ul > li > section > div {
+          width: auto; } }
+      /* line 255, ../sass/index.sass */
+      #features > section > div > p, #features > ul > li > section > div > p {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        color: #dddddd;
+        margin: 20% 0% 20% 10%;
+        text-align: left;
+        font-size: 35px; }
+        @media screen and (max-width: 675px) {
+          /* line 255, ../sass/index.sass */
+          #features > section > div > p, #features > ul > li > section > div > p {
+            font-size: 20px;
+            margin: 7%;
+            height: 50px; } }
+      /* line 266, ../sass/index.sass */
+      #features > section > div > img, #features > ul > li > section > div > img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: auto !important;
+        max-height: 373px;
+        max-width: 100%; }
+        @media screen and (max-width: 675px) {
+          /* line 266, ../sass/index.sass */
+          #features > section > div > img, #features > ul > li > section > div > img {
+            position: relative;
+            max-height: 180px; } }
+
+/* line 292, ../sass/index.sass */
+#appStore > p {
+  margin: 10% 10% 1% 10%;
+  font-size: 40px; }
+  /* line 295, ../sass/index.sass */
+  #appStore > p .logo-font {
+    font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+/* line 298, ../sass/index.sass */
+#appStore > a > img:hover {
+  opacity: 0.8; }
+
+/* line 305, ../sass/index.sass */
+#shareBox {
+  margin-bottom: 3%; }
+  /* line 308, ../sass/index.sass */
+  #shareBox .addthis_toolbox {
+    display: inline-block;
+    width: 256px; }
+    /* line 312, ../sass/index.sass */
+    #shareBox .addthis_toolbox a {
+      margin: 14px; }
+      /* line 315, ../sass/index.sass */
+      #shareBox .addthis_toolbox a span {
+        border-radius: 7px; }
+
+/* line 320, ../sass/index.sass */
+#follow_contact {
+  margin-bottom: 10%; }
+  /* line 323, ../sass/index.sass */
+  #follow_contact > p {
+    margin-top: 4%; }
+
+/* line 332, ../sass/index.sass */
+.button {
+  padding: 8px 14px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2) inset, 0 4px 0 #1074b7;
+  background: #3498db; }
+
+/* line 344, ../sass/index.sass */
+.button:active {
+  background: #3498db;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 2px 0 #1074b7;
+  top: 2px; }
+
+/* line 392, ../sass/index.sass */
+#bunnerText {
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
