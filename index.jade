@@ -9,15 +9,13 @@ html(lang="ja")
     link(rel='stylesheet', type='text/css', href='css/animate.min.css')
     link(rel="icon" type="image/x-icon" href="images/favicon.ico")
     link(rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico")
-
-    //if lt IE 9
-        script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    title LAMP -Your mate at night reading.- 
 
     //- 初期ローディング用    
     style(type='text/css') #page{display:none;}
 
-        
-    title LAMP -Your mate at night reading. - 
+    //if lt IE 9
+        script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
 
 
 
@@ -137,14 +135,18 @@ html(lang="ja")
 
   script(type='text/javascript').
 
-    var remain_sec = 30*60;
+    var TIMER_SEC = 30*60;
+    var remain_sec = TIMER_SEC;
     var isLighted = false;
-
+    var timerCounterSpan;
+    var $timerCounterSpan;
+    var stepTimerInterval;
+    var nextTimeString;
 
     $(function() {
         setTimeout(function(){
             initPage();
-        },2000)
+        },2500)
     });
 
     function initPage() {
@@ -162,22 +164,34 @@ html(lang="ja")
                         openEffect  : 'elastic',
                         aspectRatio : true
                     });
+                    
+                    set_scroll_switch(150);
+                    set_scroll_switch(90);
+                    set_scroll_switch(0);
+                    set_scroll_switch(-100);
 
-                    $('#readingLampImage').waypoint(function() {
-                        if(! isLighted){
-                            isLighted = true;
-                            light_lamp();
-                        }
-                    }, { offset: 90 });
+
 
                     setTimeout(function(){
                         $('.addthis_button_facebook').attr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
+                        timerCounterSpan = document.getElementById("timerCounter");
+                        $timerCounterSpan = $(timerCounterSpan);
                     },1000);
                 },200);
             });
         }, 200);
     }
 
+    function set_scroll_switch(offset) {
+        $('#readingLampImage').waypoint(onFireSwitch, {offset: offset});
+    }
+
+    function onFireSwitch() {
+        if(! isLighted){
+            isLighted = true;
+            light_lamp();
+        }
+    }
 
     function light_lamp(){
         $("#readingLampImage").css("display","none");
@@ -188,44 +202,43 @@ html(lang="ja")
             background: "-moz-linear-gradient(top, ffe8b0 0%, #36668c 50%, #0c3257 100%) fixed"
         });
         $("#bunner > div > div").css("color","black");
-        setInterval(function(){
-            step_timer();
-        },1000);
+
+        step_time();
+        stepTimerInterval = setInterval(step_timer, 1000);
     }
 
-    function step_timer(){
+    function turnOff_lamp(){
+        clearInterval(stepTimerInterval);
+        remain_sec = TIMER_SEC;
+        timerCounterSpan.textContent = "30:00";
+        $("#readingLampImage_light").css("display","none");
+        $("#readingLampImage").css("display","block");
+        document.getElementById("LightingSound").play();
+        $("body").css({background: "#082135"});
+        $("#bunner > div > div").css("color","black");
+        setTimeout(function(){
+            isLighted = false;
+        }, 400);
+    }
+
+    function step_time() {
         remain_sec--;
         var min = Math.floor(remain_sec/60);
         var sec = remain_sec - (min*60);
         var sec_str = ("0"+sec).slice(-2);
         var min_str = ("0"+min).slice(-2);
-        $("#timerCounter").html(min_str+":"+sec_str);
+        nextTimeString = min_str+":"+sec_str;
     }
+    function step_timer(){
+        timerCounterSpan.textContent = nextTimeString;
 
-
-
-
-
-//- //facebook button script
-//- |<div id="fb-root"></div>
-//- |<script>(function(d, s, id) {
-//- |  var js, fjs = d.getElementsByTagName(s)[0];
-//- |  if (d.getElementById(id)) return;
-//- |  js = d.createElement(s); js.id = id;
-//- |  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=278696802286743";
-//- |  fjs.parentNode.insertBefore(js, fjs);
-//- |}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-//- //Google+ button script
-//- |<script type="text/javascript">
-//- |  (function() {
-//- |    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-//- |    po.src = 'https://apis.google.com/js/platform.js';
-//- |    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-//- |  })();
-//- |</script>
+        if (nextTimeString === "00:00") {
+            turnOff_lamp();
+        }
+        else {
+            step_time();
+        }
+    }
 
 
 

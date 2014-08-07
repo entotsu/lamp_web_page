@@ -69,7 +69,7 @@ body
     font-family: HelveticaNeue-UltraLight
     background-color: #082135
     background-attachment: fixed
-    letter-spacing: 1px
+    letter-spacing: 0.1em
 
 //中央配置
 body
@@ -125,6 +125,8 @@ $bunner-max-width: 1500px
     >div
         // border: 1px solid blue
         margin: $bunner-margin $bunner-margin 0 $bunner-margin
+        +max-screen($smartPhone-size)
+            margin: 0
         >div
             // border: 1px solid orange
             // float: left;
@@ -191,23 +193,24 @@ $bunner-max-width: 1500px
 //-------------- タイマーの表示 ------------------
 #iPhoneImageBox
     position: relative
+    text-align: center
+    +max-screen($smartPhone-size)
+        width: 250px!important
     span
-        color: white !important
-        font-weight: lighter
-        font-family: HelveticaNeue-UltraLight
+        position: relative
+        top: 518px
+        left: 4px
+        text-align: center
         font-size: 37px
+        font-family: HelveticaNeue-UltraLight
+        font-weight: lighter
         letter-spacing: 0.1em
-        position: absolute
-        top: 54%
-        bottom: 0
-        left: 1%
-        right: 0
-        margin: auto
-        width: 200px
-        height: 100px
+        color: white !important
         +max-screen($middle-size)
             font-size: 24px
-            top: 59.5%
+            top: 367px
+
+
 
 
 
@@ -276,7 +279,7 @@ $slider-height-sp: $sp-slideImage-maxHeight + $sp-slideText-height + 100px
                 width: auto
 
             >p
-                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+                font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
                 font-weight: 300
                 color: #ddd
                 margin: 20% 0% 20% 10%
