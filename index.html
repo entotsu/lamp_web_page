@@ -150,7 +150,9 @@
                         timerCounterSpan = document.getElementById("timerCounter");
                         $timerCounterSpan = $(timerCounterSpan);
                         
-                        twttr.widgets.createFollowButton('taku_oka', document.getElementById('followButon'), {showCount: false, size: "large"});
+                        setTimeout(function(){
+                            twttr.widgets.createFollowButton('taku_oka', document.getElementById('followButon'), {showCount: false, size: "large"});
+                        },1500);
                         
                     },1000);
                 },200);
