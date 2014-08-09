@@ -110,9 +110,8 @@ html(lang="ja")
 
 
         section#follow_contact
-            | <a href="https://twitter.com/taku_oka" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @taku_oka</a>
+            span#followButon
             | <script charset="utf-8">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
             a#contactButton.button(href="mailto:blackn.red42@gmail.com") contact
 
         fotter
@@ -153,6 +152,7 @@ html(lang="ja")
         $("#loadingWrapper").fadeOut();
         setTimeout(function(){
             $("#page").fadeIn("slow", function(){
+
                 setTimeout(function(){
                     $('#bunnerText').addClass('animated fadeIn');
 
@@ -176,6 +176,9 @@ html(lang="ja")
                         $('.addthis_button_facebook').attr("href","http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F20071392%2FLAMP%2Findex.html%23.UrShfWRdVzL&width&layout=standard&action=like&show_faces=true&share=true&height=80&appId=278696802286743");
                         timerCounterSpan = document.getElementById("timerCounter");
                         $timerCounterSpan = $(timerCounterSpan);
+
+                        twttr.widgets.createFollowButton('taku_oka', document.getElementById('followButon'), {showCount: false, size: "large"});
+
                     },1000);
                 },200);
             });
