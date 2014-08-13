@@ -36,6 +36,7 @@
       </div>
       <p>Now Loading ...</p>
     </div>
+    <div id="backgroundSheet"></div>
     <div id="page">
       <section id="bunner">
         <div id="bunner-innerBox">
@@ -175,10 +176,7 @@
         $("#readingLampImage").css("display","none");
         $("#readingLampImage_light").css("display","block");
         document.getElementById("LightingSound").play();
-        $("body").css({
-            background: "-webkit-linear-gradient(top, #ffe8b0 0%, #36668c 50%, #0c3257 100%) fixed"}).css({
-            background: "-moz-linear-gradient(top, ffe8b0 0%, #36668c 50%, #0c3257 100%) fixed"
-        });
+        $("#backgroundSheet").css("opacity", 1);
         $("#bunner > div > div").css("color","black");
         
         step_time();
@@ -192,7 +190,7 @@
         $("#readingLampImage_light").css("display","none");
         $("#readingLampImage").css("display","block");
         document.getElementById("LightingSound").play();
-        $("body").css({background: "#082135"});
+        $("#backgroundSheet").css("opacity", 0);
         $("#bunner > div > div").css("color","black");
         setTimeout(function(){
             isLighted = false;

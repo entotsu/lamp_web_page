@@ -35,6 +35,8 @@ html(lang="ja")
                                 .loading.spin-6
         p Now Loading ...
 
+    #backgroundSheet
+
     #page
         section#bunner
           #bunner-innerBox
@@ -202,10 +204,7 @@ html(lang="ja")
         $("#readingLampImage").css("display","none");
         $("#readingLampImage_light").css("display","block");
         document.getElementById("LightingSound").play();
-        $("body").css({
-            background: "-webkit-linear-gradient(top, #ffe8b0 0%, #36668c 50%, #0c3257 100%) fixed"}).css({
-            background: "-moz-linear-gradient(top, ffe8b0 0%, #36668c 50%, #0c3257 100%) fixed"
-        });
+        $("#backgroundSheet").css("opacity", 1);
         $("#bunner > div > div").css("color","black");
 
         step_time();
@@ -219,7 +218,7 @@ html(lang="ja")
         $("#readingLampImage_light").css("display","none");
         $("#readingLampImage").css("display","block");
         document.getElementById("LightingSound").play();
-        $("body").css({background: "#082135"});
+        $("#backgroundSheet").css("opacity", 0);
         $("#bunner > div > div").css("color","black");
         setTimeout(function(){
             isLighted = false;
